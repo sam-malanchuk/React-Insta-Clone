@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 function PostContainer(props) {
@@ -11,14 +12,7 @@ function PostContainer(props) {
             <div className="postImgContainer">
                 <img src={props.postData.imageUrl} className="postImg" alt={"image-" + props.postData.id} />
             </div>
-            <div className="postCommentsContainer">
-                <div className="postIcons">
-                    <a href="/"><div className="postIcon heartIcon"></div></a>
-                    <a href="/"><div className="postIcon commentIcon"></div></a>
-                </div>
-                <p>{props.postData.likes} likes</p>
-                <p>{props.postData.timestamp}</p>
-            </div>
+            <CommentSection timestamp={props.postData.timestamp} likes={props.postData.likes} comments={props.postData.comments} />
         </div>
     );
 }

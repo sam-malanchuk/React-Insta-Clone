@@ -27,23 +27,3 @@ a.usernameText {
 img.postImg {
     width: 100%;
 }
-
-.postIcons {
-    display: flex;
-}
-
-.postIcon {
-    margin: 5px;
-}
-
-.postIcons div.heartIcon {
-    background: url(../../instagram_sprites.png) no-repeat -52px -260px;
-	width: 24px;
-	height: 24px;
-}
-
-.postIcons div.commentIcon {
-    background: url(../../instagram_sprites.png) no-repeat -239px -202px;
-	width: 24px;
-	height: 24px;
-}

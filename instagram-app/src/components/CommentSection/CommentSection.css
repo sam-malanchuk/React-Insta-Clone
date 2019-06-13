@@ -1,0 +1,72 @@
+.postIcons {
+    display: flex;
+}
+
+.postIcon {
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.postIcons div.heartIcon {
+    background: url(../../instagram_sprites.png) no-repeat -52px -260px;
+	width: 24px;
+	height: 24px;
+}
+
+.postIcons div.commentIcon {
+    background: url(../../instagram_sprites.png) no-repeat -239px -202px;
+	width: 24px;
+	height: 24px;
+}
+
+.postCommentsContainer {
+    padding: 0 15px;
+}
+
+.postLikes {
+    font-weight: 600;
+}
+
+.postCommentsContainer .comment {
+    padding: 3px 0;
+}
+
+.commentUser {
+    font-weight: 600;
+}
+
+.addComment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top: 1px solid #E6E6E6;
+}
+
+.postTimestamp {
+    color: #A09E9D;
+    font-size: 0.9em;
+    padding: 3px 0;
+    margin: 0;
+}
+
+.postLikes {
+    padding: 3px 0;
+    margin: 0;
+}
+
+.addComment div.commentIcon {
+    background: url(../../instagram_sprites.png) no-repeat -296px -208px;
+	width: 24px;
+	height: 24px;
+}
+
+input.commentInput {
+    border: none;
+    padding: 15px 0;
+    width: 90%;
+}
+
+input.commentInput::placeholder {
+    color: #413836;
+}

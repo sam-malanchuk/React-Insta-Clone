@@ -1,0 +1,49 @@
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+}
+
+.postTopContainer {
+    display: flex;
+    align-items: center;
+}
+
+img.profileImg {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    padding: 15px;
+}
+
+a.usernameText {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+img.postImg {
+    width: 100%;
+}
+
+.postIcons {
+    display: flex;
+}
+
+.postIcon {
+    margin: 5px;
+}
+
+.postIcons div.heartIcon {
+    background: url(../../instagram_sprites.png) no-repeat -52px -260px;
+	width: 24px;
+	height: 24px;
+}
+
+.postIcons div.commentIcon {
+    background: url(../../instagram_sprites.png) no-repeat -239px -202px;
+	width: 24px;
+	height: 24px;
+}

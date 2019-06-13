@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from '../Comment/Comment';
 import './CommentSection.css';
 
 function CommentSection(props) {
@@ -10,7 +11,7 @@ function CommentSection(props) {
             </div>
             <p className="postLikes">{props.likes} likes</p>
             {props.comments.map(comment => {
-                return <div className="comment"><span className="commentUser">{comment.username}</span> {comment.text}</div>;
+                return <Comment comment={comment} key={comment.id} />;
             })}
             <p className="postTimestamp">{props.timestamp}</p>
             <div className="addComment">

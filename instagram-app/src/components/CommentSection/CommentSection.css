@@ -27,14 +27,6 @@
     font-weight: 600;
 }
 
-.postCommentsContainer .comment {
-    padding: 3px 0;
-}
-
-.commentUser {
-    font-weight: 600;
-}
-
 .addComment {
     display: flex;
     align-items: center;

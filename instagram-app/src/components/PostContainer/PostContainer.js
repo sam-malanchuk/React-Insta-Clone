@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
@@ -16,5 +17,14 @@ function PostContainer(props) {
         </div>
     );
 }
+
+// PostContainer.propTypes = {
+//     postData: PropTypes.shape(
+//         id: PropTypes.number,
+//         username: PropTypes.string,
+//         thumbnailUrl:  PropTypes.string,
+//         imageUrl: PropTypes.string
+//     )
+// }
 
 export default PostContainer;

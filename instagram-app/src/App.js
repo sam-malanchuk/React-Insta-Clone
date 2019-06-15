@@ -13,12 +13,17 @@ class App extends Component {
   }
   addNewComment = (event, index) => {
     console.log("I will update index " + index + " with " + event);
+    const newData = this.state.data;
+    newData[index].comments.push({
+      id: Date.now,
+      username: "testing",
+      text: event
+    });
+    this.setState({data: newData});
   }
 
   componentDidMount() {
-    // setTimeout(() => {
       this.setState({ data: DummyData });
-    // }, 2000);
   }
 
 

@@ -14,8 +14,12 @@ class CommentSection extends React.Component {
     }
     sendNewComment = event => {
         event.preventDefault();
-        this.props.addNewComment("test", this.props.indexIs);
+        this.props.addNewComment(this.state.comment, this.props.indexIs);
+        this.setState({comment: ""});
     };
+    changeHandler = event => {
+        this.setState({comment: event.target.value});
+    }
     render() {
         return (
             <div className="postCommentsContainer">
@@ -30,8 +34,8 @@ class CommentSection extends React.Component {
                 <p className="postTimestamp">{this.props.timestamp}</p>
                 <div className="addComment">
                     <form onSubmit={this.sendNewComment}>
-                        <input type="text" className="commentInput" value={this.state.comment} placeholder="Add a comment..." />
-                        <button className="postIcon commentIcon"></button>
+                        <input type="text" className="commentInput" onChange={this.changeHandler} value={this.state.comment} placeholder="Add a comment..." />
+                        <button type="submit" className="postIcon commentIcon"></button>
                     </form>
                 </div>
             </div>

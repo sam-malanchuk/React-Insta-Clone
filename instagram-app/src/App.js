@@ -5,11 +5,14 @@ import DummyData from './dummy-data';
 import './App.css';
 
 class App extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       data: []
     }
+  }
+  addNewComment = (event, index) => {
+    console.log("I will update index " + index + " with " + event);
   }
 
   componentDidMount() {
@@ -24,8 +27,8 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {this.state.data.length > 0 ? ( 
-          this.state.data.map(post => {
-            return <PostContainer postData={post} key={post.id} />;
+          this.state.data.map((post, index) => {
+            return <PostContainer postData={post} key={post.id} index={index} addNewComment={this.addNewComment} />;
           })
         ) : (
           <h2>Loading...</h2>

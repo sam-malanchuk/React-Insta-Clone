@@ -2,24 +2,41 @@ import React from 'react';
 import Comment from '../Comment/Comment';
 import './CommentSection.css';
 
-function CommentSection(props) {
-    return (
-        <div className="postCommentsContainer">
-            <div className="postIcons">
-                <a href="/"><div className="postIcon heartIcon"></div></a>
-                <a href="/"><div className="postIcon commentIcon"></div></a>
+class CommentSection extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+          comments: [
+              [""]
+          ],
+          comment: ""
+      };
+    }
+    sendNewComment = event => {
+        event.preventDefault();
+        this.props.addNewComment("test", this.props.indexIs);
+    };
+    render() {
+        return (
+            <div className="postCommentsContainer">
+                <div className="postIcons">
+                    <a href="/"><div className="postIcon heartIcon"></div></a>
+                    <a href="/"><div className="postIcon commentIcon"></div></a>
+                </div>
+                <p className="postLikes">{this.props.likes} likes</p>
+                {this.props.comments.map(comment => {
+                    return <Comment comment={comment} key={comment.id} />;
+                })}
+                <p className="postTimestamp">{this.props.timestamp}</p>
+                <div className="addComment">
+                    <form onSubmit={this.sendNewComment}>
+                        <input type="text" className="commentInput" value={this.state.comment} placeholder="Add a comment..." />
+                        <button className="postIcon commentIcon"></button>
+                    </form>
+                </div>
             </div>
-            <p className="postLikes">{props.likes} likes</p>
-            {props.comments.map(comment => {
-                return <Comment comment={comment} key={comment.id} />;
-            })}
-            <p className="postTimestamp">{props.timestamp}</p>
-            <div className="addComment">
-                <input type="text" className="commentInput" placeholder="Add a comment..." />
-                <a href="/"><div className="postIcon commentIcon"></div></a>
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default CommentSection;

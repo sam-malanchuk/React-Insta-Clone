@@ -18,13 +18,13 @@ function PostContainer(props) {
     );
 }
 
-// PostContainer.propTypes = {
-//     postData: PropTypes.shape(
-//         id: PropTypes.number,
-//         username: PropTypes.string,
-//         thumbnailUrl:  PropTypes.string,
-//         imageUrl: PropTypes.string
-//     )
-// }
+PostContainer.propTypes = {
+    postData: PropTypes.shape({
+        id: PropTypes.string,
+        username: PropTypes.string,
+        thumbnailUrl:  PropTypes.string,
+        imageUrl: PropTypes.string
+    })
+};
 
 export default PostContainer;

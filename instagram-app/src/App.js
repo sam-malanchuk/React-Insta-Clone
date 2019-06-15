@@ -12,11 +12,10 @@ class App extends Component {
     }
   }
   addNewComment = (event, index) => {
-    console.log("I will update index " + index + " with " + event);
     const newData = this.state.data;
     newData[index].comments.push({
-      id: Date.now,
-      username: "testing",
+      id: Date.now(),
+      username: "ethan_cooper",
       text: event
     });
     this.setState({data: newData});
@@ -26,6 +25,9 @@ class App extends Component {
       this.setState({ data: DummyData });
   }
 
+  likePost = index => {
+    console.log("the post " + index + " was liked");
+  }
 
   render() {
     return (
@@ -33,7 +35,7 @@ class App extends Component {
         <SearchBar />
         {this.state.data.length > 0 ? ( 
           this.state.data.map((post, index) => {
-            return <PostContainer postData={post} key={post.id} index={index} addNewComment={this.addNewComment} />;
+            return <PostContainer postData={post} key={post.id} index={index} addNewComment={this.addNewComment} likePost={this.likePost} />;
           })
         ) : (
           <h2>Loading...</h2>

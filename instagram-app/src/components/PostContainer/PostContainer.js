@@ -13,7 +13,7 @@ function PostContainer(props) {
             <div className="postImgContainer">
                 <img src={props.postData.imageUrl} className="postImg" alt={"image-" + props.postData.id} />
             </div>
-            <CommentSection timestamp={props.postData.timestamp} likes={props.postData.likes} comments={props.postData.comments} indexIs={props.index} addNewComment={props.addNewComment} />
+            <CommentSection timestamp={props.postData.timestamp} likes={props.postData.likes} comments={props.postData.comments} indexIs={props.index} addNewComment={props.addNewComment} likePost={props.likePost} />
         </div>
     );
 }

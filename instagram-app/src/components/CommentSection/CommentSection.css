@@ -10,7 +10,8 @@
 .postIcons div.heartIcon {
     background: url(../../instagram_sprites.png) no-repeat -52px -260px;
 	width: 24px;
-	height: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 .postIcons div.commentIcon {

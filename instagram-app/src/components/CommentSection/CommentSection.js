@@ -6,9 +6,6 @@ class CommentSection extends React.Component {
     constructor() {
       super();
       this.state = {
-          comments: [
-              [""]
-          ],
           comment: ""
       };
     }
@@ -20,11 +17,14 @@ class CommentSection extends React.Component {
     changeHandler = event => {
         this.setState({comment: event.target.value});
     }
+    likePost = event => {
+        this.props.likePost(this.props.indexIs);
+    }
     render() {
         return (
             <div className="postCommentsContainer">
                 <div className="postIcons">
-                    <a href="/"><div className="postIcon heartIcon"></div></a>
+                    <div className="postIcon heartIcon" onClick={this.likePost}></div>
                     <a href="/"><div className="postIcon commentIcon"></div></a>
                 </div>
                 <p className="postLikes">{this.props.likes} likes</p>

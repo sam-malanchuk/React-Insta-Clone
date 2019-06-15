@@ -35,7 +35,7 @@ class App extends Component {
         newData[index].likes--; 
     }
     this.setState({data: newData});
-}
+  }
 
   render() {
     return (

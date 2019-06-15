@@ -8,16 +8,28 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: DummyData
+      data: []
     }
   }
+
+  componentDidMount() {
+    // setTimeout(() => {
+      this.setState({ data: DummyData });
+    // }, 2000);
+  }
+
+
   render() {
     return (
       <div className="App">
         <SearchBar />
-        {this.state.data.map(post => {
-          return <PostContainer postData={post} key={post.id} />;
-        })}
+        {this.state.data.length > 0 ? ( 
+          this.state.data.map(post => {
+            return <PostContainer postData={post} key={post.id} />;
+          })
+        ) : (
+          <h2>Loading...</h2>
+        )}
       </div>
     );
   }

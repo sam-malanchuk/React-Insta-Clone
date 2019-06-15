@@ -19,12 +19,12 @@ class CommentSection extends React.Component {
     }
     likePost = event => {
         this.props.likePost(this.props.indexIs);
-    }
+        }
     render() {
         return (
             <div className="postCommentsContainer">
                 <div className="postIcons">
-                    <div className="postIcon heartIcon" onClick={this.likePost}></div>
+                    <div className="postIcon heartIcon" id={"heartIcon" + this.props.indexIs} onClick={this.likePost}></div>
                     <a href="/"><div className="postIcon commentIcon"></div></a>
                 </div>
                 <p className="postLikes">{this.props.likes} likes</p>

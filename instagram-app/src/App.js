@@ -26,8 +26,16 @@ class App extends Component {
   }
 
   likePost = index => {
-    console.log("the post " + index + " was liked");
-  }
+    const newData = this.state.data;
+    const postHeart = document.getElementById("heartIcon" + index);
+    postHeart.classList.toggle("liked");
+    if(postHeart.classList.contains("liked")) {
+        newData[index].likes++; 
+    } else {
+        newData[index].likes--; 
+    }
+    this.setState({data: newData});
+}
 
   render() {
     return (

@@ -14,6 +14,13 @@
     cursor: pointer;
 }
 
+.postIcons div.heartIcon.liked {
+    background: url(../../instagram_sprites.png) no-repeat -26px -260px;
+	width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
 .postIcons div.commentIcon {
     background: url(../../instagram_sprites.png) no-repeat -239px -202px;
 	width: 24px;

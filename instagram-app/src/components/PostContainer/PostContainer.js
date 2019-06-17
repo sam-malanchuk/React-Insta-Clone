@@ -16,7 +16,7 @@ function PostContainer(props) {
             <CommentSection timestamp={props.postData.timestamp} likes={props.postData.likes} comments={props.postData.comments} indexIs={props.index} addNewComment={props.addNewComment} likePost={props.likePost} />
         </div>
     );
-}
+};
 
 PostContainer.propTypes = {
     postData: PropTypes.shape({

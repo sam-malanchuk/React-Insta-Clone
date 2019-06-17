@@ -3,12 +3,12 @@ import Comment from '../Comment/Comment';
 import './CommentSection.css';
 
 class CommentSection extends React.Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.state = {
           comment: ""
       };
-    }
+    };
     sendNewComment = event => {
         event.preventDefault();
         this.props.addNewComment(this.state.comment, this.props.indexIs);
@@ -16,10 +16,10 @@ class CommentSection extends React.Component {
     };
     changeHandler = event => {
         this.setState({comment: event.target.value});
-    }
+    };
     likePost = event => {
         this.props.likePost(this.props.indexIs);
-        }
+    };
     render() {
         return (
             <div className="postCommentsContainer">
@@ -40,7 +40,7 @@ class CommentSection extends React.Component {
                 </div>
             </div>
         );
-    }
-}
+    };
+};
 
 export default CommentSection;

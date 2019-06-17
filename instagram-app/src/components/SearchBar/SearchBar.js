@@ -2,19 +2,19 @@ import React from 'react';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             searchText: ""
         };
-    }
+    };
     sendSearchText = event => {
         event.preventDefault();
         this.props.filterPosts(this.state.searchText);
-    }
+    };
     changeHandler = event => {
         this.setState({searchText: event.target.value});
-    }
+    };
     render() {
         return (
         <header className="app-header">
@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
             </div>
         </header>
         );
-    }
+    };
 }
 
 export default SearchBar;

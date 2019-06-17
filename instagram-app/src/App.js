@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       data: []
     }
-  }
+  };
   addNewComment = (event, index) => {
     const newData = this.state.data;
     newData[index].comments.push({
@@ -19,20 +19,22 @@ class App extends Component {
       text: event
     });
     this.setState({data: newData});
-  }
+  };
 
   componentDidMount() {
       this.setState({ data: DummyData });
-  }
+  };
 
   filterPosts = searchTerm => {
     const filteredPosts = this.state.data.filter((post, index) => {
       if (post.username.includes(searchTerm)) {
         return post;
+      } else {
+        return null;
       }
     })
     this.setState({data: filteredPosts});
-  }
+  };
 
   likePost = index => {
     const newData = this.state.data;
@@ -44,7 +46,7 @@ class App extends Component {
         newData[index].likes--; 
     }
     this.setState({data: newData});
-  }
+  };
 
   render() {
     return (
@@ -59,7 +61,7 @@ class App extends Component {
         )}
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;

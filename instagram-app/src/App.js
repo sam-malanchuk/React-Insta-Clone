@@ -25,6 +25,15 @@ class App extends Component {
       this.setState({ data: DummyData });
   }
 
+  filterPosts = searchTerm => {
+    const filteredPosts = this.state.data.filter((post, index) => {
+      if (post.username.includes(searchTerm)) {
+        return post;
+      }
+    })
+    this.setState({data: filteredPosts});
+  }
+
   likePost = index => {
     const newData = this.state.data;
     const postHeart = document.getElementById("heartIcon" + index);
@@ -40,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar filterPosts={this.filterPosts} />
         {this.state.data.length > 0 ? ( 
           this.state.data.map((post, index) => {
             return <PostContainer postData={post} key={post.id} index={index} addNewComment={this.addNewComment} likePost={this.likePost} />;

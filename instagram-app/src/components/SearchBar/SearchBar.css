@@ -1,0 +1,61 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.logoImages {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.navIcons {
+    display: flex;
+    justify-content: space-around;
+    width: 180px;
+}
+
+.navSearch {
+    background-color: #FAFAFA;
+    border: solid 1px #DBDBDB;
+    border-radius: 2px;
+    padding: 3px 5px;
+}
+
+.navSearch::placeholder {
+    text-align: center;
+}
+
+header div.logoImage {
+    background: url(../../instagram_sprites.png) no-repeat -52px -234px;
+	width: 24px;
+	height: 24px;
+}
+
+header div.logoText {
+    background: url(../../instagram_sprites.png) no-repeat -94px -72px;
+	width: 103px;
+    height: 29px;
+}
+
+header div.exporeIcon {
+    background: url(../../instagram_sprites.png) no-repeat -130px -286px;
+	width: 24px;
+	height: 24px;
+}
+
+header div.heartIcon {
+    background: url(../../instagram_sprites.png) no-repeat -52px -260px;
+	width: 24px;
+	height: 24px;
+}
+
+header div.profileIcon {
+    background: url(../../instagram_sprites.png) no-repeat -272px -182px;
+	width: 24px;
+	height: 24px;
+}
